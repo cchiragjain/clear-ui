@@ -1,5 +1,8 @@
 import { Button } from "../components/base/Button";
+import { Checkbox } from "../components/base/Checkbox";
+import { Input } from "../components/base/Input";
 import { Label } from "../components/base/Label";
+import { TextArea } from "../components/base/TextArea";
 
 export function ComponentDemo() {
   return (
@@ -38,6 +41,28 @@ export function ComponentDemo() {
                 <Button disabled>Disabled</Button>
                 <Button isLoading>Loading</Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Basic Input Components */}
+        <section className="bg-white p-6 rounded-lg shadow-sm space-y-6">
+          <h2 className="text-xl font-semibold mb-4">Basic Input Components</h2>
+
+          <div className="space-y-4">
+            <div>
+              <Label htmlFor="demo-input">Text Input</Label>
+              <Input id="demo-input" placeholder="Enter text..." />
+            </div>
+
+            <div>
+              <Label htmlFor="demo-textarea">Text Area</Label>
+              <TextArea id="demo-textarea" placeholder="Enter long text..." />
+            </div>
+
+            <div>
+              <Label htmlFor="demo-checkbox">Checkbox</Label>
+              <Checkbox id="demo-checkbox" label="Subscribe to newsletter" />
             </div>
           </div>
         </section>
