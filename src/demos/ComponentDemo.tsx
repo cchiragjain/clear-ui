@@ -7,12 +7,14 @@ import { MultiSelect } from "../components/base/MultiSelect";
 import { Select } from "../components/base/Select";
 import { TextArea } from "../components/base/TextArea";
 
+import { RadioGroup } from "../components/base/RadioGroup";
 import { demoData } from "../lib/demo-data";
 
 export function ComponentDemo() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
   const [selectedValues2, setSelectedValues2] = useState<string[]>([]);
+  const [theme, setTheme] = useState("light");
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -106,6 +108,16 @@ export function ComponentDemo() {
                 value={selectedValues2}
                 onChange={setSelectedValues2}
                 placeholder="Choose programming languages"
+              />
+            </div>
+
+            <div>
+              <Label>Radio Group</Label>
+              <RadioGroup
+                name="theme"
+                options={demoData.radioOptions}
+                value={theme}
+                onChange={setTheme}
               />
             </div>
           </div>

@@ -46,4 +46,21 @@ export const demoData = {
     { value: "art", label: "Art" },
     { value: "gaming", label: "Gaming" },
   ],
+  radioOptions: [
+    {
+      value: "light",
+      label: "Light Theme",
+      description: "Use light colors for the interface",
+    },
+    {
+      value: "dark",
+      label: "Dark Theme",
+      description: "Use dark colors for the interface",
+    },
+    {
+      value: "system",
+      label: "System Theme",
+      description: "Follow system preferences",
+    },
+  ],
 };
