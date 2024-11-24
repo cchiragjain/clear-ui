@@ -46,6 +46,15 @@ export const demoData = {
     { value: "art", label: "Art" },
     { value: "gaming", label: "Gaming" },
   ],
+  countries: [
+    { value: "us", label: "United States" },
+    { value: "uk", label: "United Kingdom" },
+    { value: "ca", label: "Canada" },
+    { value: "au", label: "Australia" },
+    { value: "de", label: "Germany" },
+    { value: "fr", label: "France" },
+    { value: "jp", label: "Japan" },
+  ],
   radioOptions: [
     {
       value: "light",
