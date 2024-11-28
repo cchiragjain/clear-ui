@@ -72,4 +72,23 @@ export const demoData = {
       description: "Follow system preferences",
     },
   ],
+  accordionItems: [
+    {
+      id: "1",
+      title: "What is React?",
+      content: "React is a JavaScript library for building user interfaces.",
+    },
+    {
+      id: "2",
+      title: "Why use TypeScript?",
+      content:
+        "TypeScript adds static typing to JavaScript, improving developer experience and code quality.",
+    },
+    {
+      id: "3",
+      title: "What is Tailwind CSS?",
+      content:
+        "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.",
+    },
+  ],
 };

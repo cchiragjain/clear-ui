@@ -7,6 +7,8 @@ import { MultiSelect } from "../components/base/MultiSelect";
 import { Select } from "../components/base/Select";
 import { TextArea } from "../components/base/TextArea";
 
+import { Accordion } from "../components/base/Accordion";
+import { RangeSlider } from "../components/base/RangeSlider";
 import { LoadingSpinner } from "../components/base/LoadingSpinner";
 import { RadioGroup } from "../components/base/RadioGroup";
 import { Skeleton } from "../components/base/Skeleton";
@@ -21,6 +23,7 @@ export function ComponentDemo() {
   const [selectedValues2, setSelectedValues2] = useState<string[]>([]);
   const [theme, setTheme] = useState("light");
   const [isLoading, setIsLoading] = useState(false);
+  const [sliderValue, setSliderValue] = useState(50);
 
   const handleLoadingDemo = () => {
     setIsLoading(true);
@@ -204,6 +207,33 @@ export function ComponentDemo() {
                   <LoadingSpinner size="lg" />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Interactive Components */}
+        <section className="bg-white p-6 rounded-lg shadow-sm space-y-6">
+          <h2 className="text-xl font-semibold mb-4">Interactive Components</h2>
+
+          <div className="space-y-4">
+            <div>
+              <Label>Accordion</Label>
+              <Accordion items={demoData.accordionItems} />
+            </div>
+
+            <div>
+              <Label>Accordion With Multiple Open at same time</Label>
+              <Accordion items={demoData.accordionItems} multiple={true} />
+            </div>
+
+            <div>
+              <Label>Range Slider</Label>
+              <RangeSlider
+                min={0}
+                max={100}
+                value={sliderValue}
+                onChange={setSliderValue}
+              />
             </div>
           </div>
         </section>
