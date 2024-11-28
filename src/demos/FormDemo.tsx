@@ -5,6 +5,7 @@ import { Checkbox } from "../components/base/Checkbox";
 import { FormField } from "../components/base/FormField";
 import { Input } from "../components/base/Input";
 import { MultiSelect } from "../components/base/MultiSelect";
+import { RangeSlider } from "../components/base/RangeSlider";
 import { Select } from "../components/base/Select";
 import { TextArea } from "../components/base/TextArea";
 import { useToast } from "../hooks/use-toast";
@@ -23,6 +24,7 @@ export function FormDemo() {
   } = useForm<UserFormData>({
     resolver: zodResolver(userFormSchema),
     defaultValues: {
+      experience: 0,
       newsletter: false,
       interests: [],
     },
@@ -119,6 +121,19 @@ export function FormDemo() {
                 error={!!errors.bio}
               />
             </FormField>
+
+            <FormField
+              label="Experience Level"
+              error={errors.experience?.message}
+            >
+              <RangeSlider
+                min={0}
+                max={100}
+                value={watch("experience")}
+                onChange={(value) => setValue("experience", value)}
+              />
+            </FormField>
+
             <FormField>
               <Checkbox
                 {...register("newsletter")}

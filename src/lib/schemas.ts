@@ -12,6 +12,7 @@ export const userFormSchema = z.object({
   country: z.string().min(1, "Please select a country"),
   bio: z.string().max(500, "Bio must be less than 500 characters"),
   newsletter: z.boolean(),
+  experience: z.number().min(0).max(100),
 });
 
 export type UserFormData = z.infer<typeof userFormSchema>;
