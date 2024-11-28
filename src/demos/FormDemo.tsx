@@ -7,10 +7,13 @@ import { Input } from "../components/base/Input";
 import { MultiSelect } from "../components/base/MultiSelect";
 import { Select } from "../components/base/Select";
 import { TextArea } from "../components/base/TextArea";
+import { useToast } from "../hooks/use-toast";
 import { demoData } from "../lib/demo-data";
 import { userFormSchema, type UserFormData } from "../lib/schemas";
 
 export function FormDemo() {
+  const { showToast } = useToast();
+
   const {
     register,
     handleSubmit,
@@ -27,6 +30,7 @@ export function FormDemo() {
 
   const onSubmit = (data: UserFormData) => {
     console.log("Form submitted:", data);
+    showToast("Form submitted successfully!", "success");
   };
 
   return (
