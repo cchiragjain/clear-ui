@@ -1,17 +1,19 @@
 import { useState } from "react";
+import { Accordion } from "../components/base/Accordion";
 import { Button } from "../components/base/Button";
 import { Checkbox } from "../components/base/Checkbox";
+import { Dialog } from "../components/base/Dialog";
+import { HoverCard } from "../components/base/HoverCard";
 import { Input } from "../components/base/Input";
 import { Label } from "../components/base/Label";
-import { MultiSelect } from "../components/base/MultiSelect";
-import { Select } from "../components/base/Select";
-import { TextArea } from "../components/base/TextArea";
-
-import { Accordion } from "../components/base/Accordion";
-import { RangeSlider } from "../components/base/RangeSlider";
 import { LoadingSpinner } from "../components/base/LoadingSpinner";
+import { MultiSelect } from "../components/base/MultiSelect";
 import { RadioGroup } from "../components/base/RadioGroup";
+import { RangeSlider } from "../components/base/RangeSlider";
+import { Select } from "../components/base/Select";
+import { Sidebar } from "../components/base/Sidebar";
 import { Skeleton } from "../components/base/Skeleton";
+import { TextArea } from "../components/base/TextArea";
 import { useToast } from "../hooks/use-toast";
 import { demoData } from "../lib/demo-data";
 
@@ -24,6 +26,7 @@ export function ComponentDemo() {
   const [theme, setTheme] = useState("light");
   const [isLoading, setIsLoading] = useState(false);
   const [sliderValue, setSliderValue] = useState(50);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleLoadingDemo = () => {
     setIsLoading(true);
@@ -234,6 +237,58 @@ export function ComponentDemo() {
                 value={sliderValue}
                 onChange={setSliderValue}
               />
+            </div>
+
+            <div>
+              <Label>Hover Card</Label>
+              <div className="flex gap-2">
+                <HoverCard
+                  trigger={<Button variant="outline">Product Info</Button>}
+                  content={
+                    <div>
+                      <h3 className="font-semibold mb-2">Premium Package</h3>
+                      <p className="text-sm text-gray-600">
+                        Our premium package includes all features plus priority
+                        support.
+                      </p>
+                      <div className="mt-2 font-semibold text-blue-600">
+                        $99/month
+                      </div>
+                    </div>
+                  }
+                />
+              </div>
+            </div>
+
+            <div>
+              <Label>Sidebar</Label>
+              <Sidebar>
+                <div className="p-4">
+                  <h3 className="font-semibold">Sidebar Content</h3>
+                  <p>This is the sidebar content.</p>
+                </div>
+              </Sidebar>
+              <Sidebar position="right">
+                <div className="p-4">
+                  <h3 className="font-semibold">Sidebar Content</h3>
+                  <p>This is the sidebar content from right.</p>
+                </div>
+              </Sidebar>
+            </div>
+
+            <div>
+              <Label>Dialog</Label>
+              <Button onClick={() => setIsDialogOpen(true)}>Open Dialog</Button>
+              <Dialog
+                isOpen={isDialogOpen}
+                onClose={() => setIsDialogOpen(false)}
+                title="Dialog Example"
+              >
+                <p>This is a dialog content example.</p>
+                <div className="mt-4 flex justify-end">
+                  <Button onClick={() => setIsDialogOpen(false)}>Close</Button>
+                </div>
+              </Dialog>
             </div>
           </div>
         </section>
