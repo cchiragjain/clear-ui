@@ -20,6 +20,18 @@ Install the library via npm:
 npm install @cchiragjain/clear.ui
 ```
 
+- Update your tailwind.config.js file.
+```javascript
+import { myTailwindContent } from "@cchiragjain/clear.ui";
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", myTailwindContent()],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
 ---
 
 ## 📖 Documentation & Live Preview
