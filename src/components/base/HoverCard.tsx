@@ -42,8 +42,8 @@ export const HoverCard: React.FC<HoverCardProps> = ({
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const triggerRef = useRef<HTMLDivElement>(null);
   // TODO: find type of Timeout
-  const openTimeout = useRef<number>();
-  const closeTimeout = useRef<number>();
+  const openTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const closeTimeout = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     return () => {
