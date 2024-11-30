@@ -68,7 +68,6 @@ export const Dialog = React.forwardRef<HTMLDivElement, DialogProps>(
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50 z-40"
-              onClick={() => onClose()}
             />
             <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
               <motion.div
