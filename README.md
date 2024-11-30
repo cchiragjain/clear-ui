@@ -36,8 +36,7 @@ export default {
 
 ## 📖 Documentation & Live Preview
 
-Explore the full documentation and live component previews at:  
-[**clear.ui.chiragjain.online**](https://clear.ui.chiragjain.online)
+Explore the full documentation and live component previews at: [**clear.ui.chiragjain.online**](https://clear.ui.chiragjain.online)
 
 ---
 
