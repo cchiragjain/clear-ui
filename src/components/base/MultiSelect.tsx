@@ -64,6 +64,7 @@ export const MultiSelect = React.forwardRef<HTMLDivElement, MultiSelectProps>(
     const listRef = useRef<HTMLUListElement>(null);
 
     const selectedOptions = options.filter((opt) => value.includes(opt.value));
+
     const filteredOptions = options.filter((opt) =>
       opt.label.toLowerCase().includes(searchTerm.toLowerCase())
     );
