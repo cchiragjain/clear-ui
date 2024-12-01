@@ -7,7 +7,7 @@ A modern and lightweight React UI component library built with **TypeScript** an
 - **Typed for safety**: Built with TypeScript for a seamless developer experience.
 - **Stylish and customizable**: Powered by Tailwind CSS for effortless styling and customization.
 - **Ready-to-use**: A variety of pre-built components to kickstart your project.
-- - **Accessible by design**: Built with accessibility (aria) in mind to ensure inclusivity.
+- **Accessible by design**: Built with accessibility (aria) in mind to ensure inclusivity.
 - **Storybook Integration**: Explore live examples and documentation for each component.
 
 ---
@@ -21,6 +21,7 @@ npm install @cchiragjain/clear.ui
 ```
 
 - Update your tailwind.config.js file.
+
 ```javascript
 import { myTailwindContent } from "@cchiragjain/clear.ui";
 export default {
